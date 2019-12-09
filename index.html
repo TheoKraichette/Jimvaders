@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8" />
+	<style>
+		body {
+			margin:0;
+			background:#222;
+			font-family:arial;
+		}
+
+		#logs-container {
+			position:absolute;
+			bottom:0;
+			left:0;
+			width:250px;
+			background:#444;
+			border-right:1px solid #111;
+			font-size:12px;
+			font-family:monospace;
+			color:white;
+			opacity:0;
+		}
+		
+		#logs-container:hover {
+			opacity:1;
+		}
+
+		#game {
+			display:none;
+			position:relative;
+			width:800px;
+			height:600px;
+			background:black;
+			border:1px solid #444;
+		}
+
+		#filter {
+			position:absolute;
+			top:205px;
+			left:150px;
+			width:500px;
+			height:100px;
+			color:white;
+			font-family:arial;
+			font-size:20px;
+			text-align:center;
+		}
+
+		#gun {
+			display:none;
+			position:absolute;
+			width:30px;
+			height:38px;
+			background:url("spaceship.png");
+			left:390px;
+			bottom:0;
+		}
+
+		.bullet {
+			position:absolute;
+			width:2px;
+			height:20px;
+			bottom:20px;
+			background:red;
+		}
+
+		.bullet2 {
+			position:absolute;
+			width:3px;
+			height:10px;
+			bottom:20px;
+			background:chartreuse;
+		}
+
+		.enemy-bullet {
+			position:absolute;
+			width:3px;
+			height:15px;
+			background:#AF0;
+		}
+
+		.enemy {
+			position:absolute;
+			width:60px;
+			height:45px;
+			background:url("ennemy1.png");
+		}
+		.enemy2 {
+			position:absolute;
+			width:60px;
+			height:45px;
+			background:url("enemy2.jpg");
+		}
+
+		#lifes {
+			position:absolute;
+			top:20px;
+			left:20px;
+		}
+
+		#score {
+			position:absolute;
+			top:20px;
+			right:20px;
+			color:#CCC;
+			font-size:20px;
+		}
+		#credits {
+			position:absolute;
+			bottom:10px;
+			right:10px;
+			color:#333;
+			font-size:12px;
+		}
+	</style>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript" src="jqueryui.js"></script>
+	<script type="text/javascript" src="script.js"></script>
+</head>
+<body>
+	<div id="logs-container">
+	</div>
+	<div id="game">
+		<div id="score">
+			0
+		</div>
+		<div id="lifes">
+			<img src="heart.png" class="life" /><img src="heart.png" class="life" /><img src="heart.png" class="life" />
+		</div>
+		<div id="filter">
+            <img src="space-invaders-logo.png"/><br>
+			Appuyez sur S
+		</div>
+		<div id="gun"></div>
+		<div id="credits">Jean-Michel HINICKER</div>
+	</div>
+</body>
+</html>
